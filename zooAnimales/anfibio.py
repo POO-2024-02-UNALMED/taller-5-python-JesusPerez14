@@ -1,4 +1,4 @@
-from animal import Animal
+from zooAnimales.animal import Animal
 
 class Anfibio(Animal):
     listado = []
@@ -22,14 +22,14 @@ class Anfibio(Animal):
         return "saltar"
     
     @classmethod
-    def crearRana(nombre,edad,genero):
+    def crearRana(cls,nombre,edad,genero):
         rana = Anfibio(nombre,edad,"selva",genero,"rojo",True)
-        Anfibio.ranas += 1
+        cls.ranas += 1
     
     @classmethod
-    def crearSalamandra(nombre,edad,genero):
+    def crearSalamandra(cls,nombre,edad,genero):
         salamandra = Anfibio(nombre,edad,"selva",genero,"negro y amarillo",False)
-        Anfibio.salamandras += 1
+        cls.salamandras += 1
 
     def getColorPiel(self):
         return self.colorPiel

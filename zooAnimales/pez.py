@@ -1,4 +1,4 @@
-from animal import Animal
+from zooAnimales.animal import Animal
 
 class Pez(Animal):
     listado = []
@@ -22,13 +22,14 @@ class Pez(Animal):
         return "nadar"
     
     @classmethod
-    def crearSalmon(nombre,edad,genero):
+    def crearSalmon(cls,nombre,edad,genero):
         salmon = Pez(nombre,edad,"oceano",genero,"rojo",6)
-        Pez.salmones += 1
+        cls.salmones += 1
     
     @classmethod
-    def crearBacalao(nombre,edad,genero):
+    def crearBacalao(cls,nombre,edad,genero):
         bacalao = Pez(nombre,edad,"oceano",genero,"gris",6)
+        cls.bacalaos += 1
     
     def getColorEscamas(self):
         return self.colorEscamas

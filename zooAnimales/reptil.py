@@ -1,4 +1,4 @@
-from animal import Animal
+from .animal import Animal
 
 class Reptil(Animal):
     listado = []
@@ -22,14 +22,14 @@ class Reptil(Animal):
         return "reptar"
 
     @classmethod
-    def crearIguana(nombre,edad,genero):
+    def crearIguana(cls,nombre,edad,genero):
         iguana = Reptil(nombre,edad,"humedal",genero,"verde",3)
-        Reptil.numReptiles += 1
+        cls.numReptiles += 1
 
     @classmethod
-    def crearSerpientes(nombre,edad,genero):
+    def crearSerpiente(cls,nombre,edad,genero):
         serpiente = Reptil(nombre,edad,"jungla",genero,"blanco",1)
-        Reptil.numReptiles += 1
+        cls.numReptiles += 1
     
     def getColorEscamas(self):
         return self.colorEscamas

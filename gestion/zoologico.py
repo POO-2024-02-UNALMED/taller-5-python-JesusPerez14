@@ -4,6 +4,11 @@ class Zoologico:
         self.ubicacion = ubicacion
         self.zonas = zonas
         pass
+
+    def __init__(self,nombre,ubicacion):
+        self.nombre = nombre
+        self.ubicacion = ubicacion
+        self.zonas = []
     
     def agregarZonas(self,zona):
         self.zonas.append(zona)
